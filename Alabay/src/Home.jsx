@@ -1,6 +1,7 @@
 import React from 'react';
 import './CSS/Custom.css';
 import img1 from './Alabay Assets/1.png';
+import img2 from './Alabay Assets/2.png';
 import img3 from './Alabay Assets/3.png';
 import img4 from './Alabay Assets/4.png';
 import img5 from './Alabay Assets/5.png';
@@ -13,6 +14,7 @@ import VerticalCards from './Components/VerticalCards';
 import SimpleCard from './Components/SimpleCard';
 import Merchandise from './Components/Merchandise';
 import SingleCard from './Components/SingleCard';
+import ImageCarousel_2 from './Components/ImageCarousel_2';
 
 function Home() {
     return (
@@ -85,16 +87,29 @@ function Home() {
                     <Merchandise />
                 </div>
 
-                 {/* Section 7 */}
-                 <div className='w-full h-screen custom-radial-gradient p-10 mt-[20%]'>
+                {/* Section 7 */}
+                <div className='w-full h-screen custom-radial-gradient p-10 mt-[20%]'>
                     <h1 className='text-center bangers-regular text-[100px] md:text-[130px] lg:text-[150px] text-white lg:ml-10'>GAMES</h1>
                     <p className='text-center font-bold  md:text-5xl lg:text-1xl text-gray-800'>Stay tuned for upcoming games !</p>
                     <SingleCard />
-                </div> 
+                </div>
+
+                {/* Section 8 */}
+                <div className='w-full h-screen p-10'>
+                    <h1 className='font-extrabold text-[100px] md:text-[130px] lg:text-[60px] text-yellow-500 lg:ml-10'>GAME <span className='text-gray-600'>PREVIEWS</span> </h1>
+                    <ImageCarousel_2 />
+                </div>
+
+                {/* Section 9 */}
+                <div className='w-full h-screen custom-radial-gradient p-10 mt-[20%]'>
+                    <h1 className='bangers-regular text-[100px] md:text-[130px] lg:text-[150px] text-white lg:ml-10'>SOCIAL MEDIA LINKS</h1>
+                    <img src={img2} alt="" className='w-full max-w-[50%] mt-10 md:mt-[-100px] lg:mt-[-100px] lg:ml-20 object-cover' />
+
+                </div>
+
 
             </div>
-        </div>
-    );
+        </div>);
 }
 
 export default Home;
