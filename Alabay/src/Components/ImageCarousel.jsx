@@ -33,7 +33,7 @@ function SamplePrevArrow(props) {
 }
 
 const ImageCarousel = () => {
-    const images = [img1, img2, img3, img4, img5, img6,img1,img2,img3];
+    const images = [img1, img2, img3, img4, img5, img6, img1, img2, img3];
     const [activeSection, setActiveSection] = useState('All');
 
     const settings = {
@@ -82,9 +82,11 @@ const ImageCarousel = () => {
             </div>
             <Slider ref={sliderRef} {...settings}>
                 {images.map((image, index) => (
-                    <div key={index} className='bg-white h-[200px] rounded-xl flex justify-center'>
-                        <img className='h-[200px] rounded-xl border border-black object-cover w-full ' src={image} alt={`Image ${index + 1}`} />
+                    <div key={index} className='p-2'>
+                        <div className='bg-white h-[200px] rounded-xl flex justify-center'>
+                            <img className='h-[200px] rounded-xl border border-black object-cover w-full' src={image} alt={`Image ${index + 1}`} />
                         </div>
+                    </div>
                 ))}
             </Slider>
         </div>

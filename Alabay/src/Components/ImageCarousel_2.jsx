@@ -30,8 +30,7 @@ function SamplePrevArrow(props) {
 }
 
 const ImageCarousel_2 = () => {
-    const images = [img1, img2, img3 ];
-    const [activeSection, setActiveSection] = useState('All');
+    const images = [img1, img2, img3];
 
     const settings = {
         dots: false,
@@ -39,16 +38,9 @@ const ImageCarousel_2 = () => {
         slidesToScroll: 3,
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,
-        afterChange: (current) => {
-            // Update active section based on the current slide
-            if (current < 3) {
-                setActiveSection('All');
-            } else if (current < 6) {
-                setActiveSection('Photos');
-            } else {
-                setActiveSection('Videos');
-            }
-        }
+        // Add a centerMode setting if you want a more spaced look
+        centerMode: true,
+        centerPadding: '20px', // Adjust this value to control the gap
     };
 
     const handleSectionClick = (section) => {
@@ -58,21 +50,23 @@ const ImageCarousel_2 = () => {
             Photos: 1,
             Videos: 2,
         };
-        // Go to the first slide of the corresponding section
-        sliderRef.slickGoTo(indexMap[section] * 3); // Assuming 3 slides per section
+        sliderRef.current.slickGoTo(indexMap[section] * 3);
     };
 
     const sliderRef = React.useRef(null);
 
     return (
         <div className='bg-white w-3/4 m-auto'>
-            <div className="flex justify-center mb-4">
+            <div className="flex justify-center m-4">
+                {/* You can add section buttons here if needed */}
             </div>
             <Slider ref={sliderRef} {...settings}>
                 {images.map((image, index) => (
-                    <div key={index} className='bg-white h-[300px] rounded-xl flex justify-center'>
-                        <img className='h-[300px] w-[300px] rounded-xl border border-black object-cover w-full ' src={image} alt={`Image ${index + 1}`} />
+                    <div key={index} className='p-2'> {/* Add padding to create space between images */}
+                        <div className='bg-white h-[300px] rounded-xl flex justify-center'>
+                            <img className='h-[300px] w-[300px] rounded-3xl border border-black object-cover' src={image} alt={`Image ${index + 1}`} />
                         </div>
+                    </div>
                 ))}
             </Slider>
         </div>

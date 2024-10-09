@@ -85,27 +85,26 @@ function Home() {
                 {/* Section 6 */}
                 <div className='w-full h-screen p-10'>
                     <h1 className='bangers-regular text-center text-[100px] md:text-[130px] lg:text-[150px] text-yellow-400 lg:ml-10'>MERCHANDISE</h1>
-                    <Merchandise />
+                    <div className='mt-5'><Merchandise /></div>
                 </div>
 
                 {/* Section 7 */}
-                <div className='w-full h-screen custom-radial-gradient p-10 mt-[20%]'>
+                <div className='w-full h-screen custom-radial-gradient p-1 mt-[20%]'>
                     <h1 className='text-center bangers-regular text-[100px] md:text-[130px] lg:text-[150px] text-white lg:ml-10'>GAMES</h1>
-                    <p className='text-center font-bold  md:text-5xl lg:text-1xl text-gray-800'>Stay tuned for upcoming games !</p>
+                    <p className='text-center lg:mt-[-30px] lg:mb-10 font-bold  md:text-4xl lg:text-4xl text-gray-800'>Stay tuned for upcoming games !</p>
                     <SingleCard />
                 </div>
 
                 {/* Section 8 */}
-                <div className='w-full h-screen p-10'>
+                <div className='w-full h-[50%] p-10'>
                     <h1 className='font-extrabold text-[100px] md:text-[130px] lg:text-[60px] text-yellow-500 lg:ml-10'>GAME <span className='text-gray-600'>PREVIEWS</span> </h1>
                     <ImageCarousel_2 />
+                    <h1 className='bangers-regular text-[100px] mt-20 md:text-[130px] lg:text-[150px] text-yellow-400 lg:ml-10'>SOCIAL MEDIA LINKS</h1>
                 </div>
 
                 {/* Section 9 */}
-                <div className='w-full h-screen custom-radial-gradient p-10 mt-[20%]'>
-                    <h1 className='bangers-regular text-[100px] md:text-[130px] lg:text-[150px] text-white lg:ml-10'>SOCIAL MEDIA LINKS</h1>
-                    <img src={img2} alt="" className='w-full max-w-[50%] mt-10 md:mt-[-100px] lg:mt-[-100px] lg:ml-20 object-cover' />
-
+                <div className='w-full h-half custom-radial-gradient p-10 mt-[20%]'>
+                    <img src={img2} alt="" className='w-full max-w-[50%] mt-10 md:mt-[-100px] lg:mt-[0px] lg:ml-20 object-cover' />
                 </div>
 
 
