@@ -5,7 +5,7 @@ import './CSS/Custom.css';
 function Bg() {
   return (
     <div
-      className="fixed h-screen w-full bg-cover bg-center z-1"
+      className="fixed h-screen w-full bg-cover bg-center z-[1]"
       style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
       <h2 className="bangers-regular text-[32px] sm:text-[48px] md:text-[72px] lg:text-[200px] xl:text-[140px] font-normal leading-tight text-center bg-gradient-to-b from-[#FFF280] to-[#7EFF5E] text-transparent bg-clip-text">

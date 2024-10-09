@@ -18,7 +18,7 @@ import ImageCarousel_2 from './Components/ImageCarousel_2';
 
 function Home() {
     return (
-        <div className='z-[1] absolute w-full flex justify-center top-[80%]'>
+        <div className='z-[2] absolute w-full flex justify-center top-[80%]'>
             <div className='w-3/4 bg-white rounded-3xl h-screen overflow-auto scrollbar'>
 
                 {/* Section 1 */}
@@ -60,7 +60,7 @@ function Home() {
                         </div>
                         <img src={img4} alt="" className='w-full max-w-[50%] mt-10 md:mt-[-100px] lg:mt-[-200px] object-cover' />
                     </div>
-                    <div className='flex flex-col md:flex-row gap-4 justify-center'>
+                    <div className='flex flex-col md:flex-row md:gap-2 lg:gap-4 justify-center lg:mt-20 md:mt-[30px]'>
                         <VerticalCards bg={"bg-yellow-600"} heading={"Community Building"} subHeading={"and Initial Launch"} image={img5} />
                         <VerticalCards bg={"bg-sky-500"} heading={"Community Building"} subHeading={"and Initial Launch"} image={img6} />
                         <VerticalCards bg={"bg-purple-400"} heading={"Community Building"} subHeading={"and Initial Launch"} image={img7} />
@@ -70,8 +70,9 @@ function Home() {
 
                 {/* Section 5 */}
                 <div className='w-full h-screen custom-radial-gradient p-10 mt-[20%]'>
-                    <h1 className='bangers-regular text-[100px] md:text-[130px] lg:text-[150px] text-white lg:ml-10'>TOKENOMICS</h1>
+                    <h1 className='bangers-regular text-[100px] md:text-[110px] lg:text-[150px] text-white lg:ml-10'>TOKENOMICS</h1>
                     <div className='flex justify-center'>
+                        <div className='w-[100px]'></div>
                         <div className='flex flex-col gap-5 justify-center'>
                             <SimpleCard subHeading="LIQUIDITY" heading="LOCKED" />
                             <SimpleCard subHeading="CONTRACT" heading="RENOUNCED" />
